@@ -1,0 +1,22 @@
+{
+  "name": "a99-team-32",
+  "version": "1.0.0",
+  "description": "Node package for the final project",
+  "main": "main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-fall/a99-team-32.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-fall/a99-team-32/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-fall/a99-team-32#readme"
+}
