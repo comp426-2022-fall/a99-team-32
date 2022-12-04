@@ -22,19 +22,20 @@ Other steps that you will need to take after your team has accepted the assignme
 ## Roles
 
 Shuyi  
-- review manager - someone to review pull requests and merge or reject them and manage the related discussions  
-- release manager - someone to manage the packaging and release process for your prototype package  
+- review manager - review pull requests to merge or reject them and manage the related discussions  
+- release manager - manage the packaging and release process for your prototype package  
 - back end lead  
 
 Kelly  
-- plan manager - someone to keep an eye on the overall plan and keep the project tab/to-do list up to date  
-- documentation manager - someone to keep the documentation in order and identify what is missing and needs to be documented  
+- plan manager - manage overall plan and keep the project tab/to-do list up to date  
+- documentation manager - keep the documentation in order and identify what is missing and needs to be documented  
 - database lead  
 
 Vidya  
-- project manager - someone keeping track of all the moving parts and make sure that everything that needs to happen is happening  
+- project manager - keep track of all the moving parts and make sure that everything that needs to happen is happening  
 - front end lead  
 - design lead  
 
 ## References
+
 - [README.md writing and formatting](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
