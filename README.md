@@ -19,18 +19,22 @@ Other steps that you will need to take after your team has accepted the assignme
 9. Use **Pull requests** to propose changes and incorporate them into your code from various team members. 
 10. Use **Issues** to identify and track bugs and also to communicate about various aspects of the project.
 
-## Team mangement
+## Roles
 
-Some basic roles you will want to consider:
-Shuyi
-    a. review manager - someone to review pull requests and merge or reject them and manage the related discussions
-    b. release manager - someone to manage the packaging and release process for your prototype package
-    c. back end lead
-Kelly
-    a. plan manager - someone to keep an eye on the overall plan and keep the project tab/to-do list up to date
-    b. documentation manager - someone to keep the documentation in order and identify what is missing and needs to be documented
-    c. database lead
-Vidya
-    a. project manager - someone keeping track of all the moving parts and make sure that everything that needs to happen is happening. (Vidya)
-    b. front end lead
-    c. design lead
+Shuyi  
+- review manager - someone to review pull requests and merge or reject them and manage the related discussions  
+- release manager - someone to manage the packaging and release process for your prototype package  
+- back end lead  
+
+Kelly  
+- plan manager - someone to keep an eye on the overall plan and keep the project tab/to-do list up to date  
+- documentation manager - someone to keep the documentation in order and identify what is missing and needs to be documented  
+- database lead  
+
+Vidya  
+- project manager - someone keeping track of all the moving parts and make sure that everything that needs to happen is happening  
+- front end lead  
+- design lead  
+
+## References
+- [README.md writing and formatting](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
