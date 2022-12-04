@@ -19,6 +19,12 @@ Other steps that you will need to take after your team has accepted the assignme
 9. Use **Pull requests** to propose changes and incorporate them into your code from various team members. 
 10. Use **Issues** to identify and track bugs and also to communicate about various aspects of the project.
 
+fully documented, including setup instructions, full API documentation, and user instructions, as well as your planning workflow (notes, GitHub Project boards, discussions archives, etc.).
+
+team will create a <= 3-minute video describing your app to present to the class about your app. This can be a very basic walkthrough, or a description/presentation of features/use cases, or something else. Be creative. Think of it as an opportunity to hone your ability to pitch an idea that you have in prototype (because that is what it is).
+
+check deliverables.
+
 ## Roles
 
 Shuyi  
