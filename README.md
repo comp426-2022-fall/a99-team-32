@@ -1,4 +1,4 @@
-# a99-team-32
+# Weather App
 
 ## Summary 
 
@@ -12,42 +12,36 @@ You will change everything below to be the main technical documentation, as outl
 
 Other steps that you will need to take after your team has accepted the assignment:
 
-1. Choose a license and update the LICENSE file accordingly. 
 2. Edit this README.md file and use it as the main location of your technical documentation with links out to information contained under `/docs/`.
 3. Create a `/docs/` directory for more elaborate documentation of your API, planning notes, etc.
-4. Make sure that all of your team members have access to the repository as administrators.
-5. Create a project under the **Projects** tab. Use this to manage your planning. Create a To-do list, etc. Explore the tools available and user them to manage your project.
 7. Assign team roles and include a listing of those roles in this README.md file or in another file under `/docs/`.
 8. Then put your entire development workflow in this repository.
 9. Use **Pull requests** to propose changes and incorporate them into your code from various team members. 
 10. Use **Issues** to identify and track bugs and also to communicate about various aspects of the project.
 
-## Team mangement
+fully documented, including setup instructions, full API documentation, and user instructions, as well as your planning workflow (notes, GitHub Project boards, discussions archives, etc.).
 
-Plan to meet with your team ASAP.
-Talk through identifying roles within your team.
+team will create a <= 3-minute video describing your app to present to the class about your app. This can be a very basic walkthrough, or a description/presentation of features/use cases, or something else. Be creative. Think of it as an opportunity to hone your ability to pitch an idea that you have in prototype (because that is what it is).
 
-Try to figure out what each of you are good at/enjoy doing and try to work out roles that incorporate that.
+check deliverables.
 
-Some basic roles you will want to consider:
+## Roles
 
-1. A review manager - someone to review pull requests and merge or reject them and manage the related discussions (Shuyi Chen)
-2. A plan manager - someone to keep an eye on the overall plan and keep the project tab/to-do list up to date (Kelly Fan)
-3. A documentation manager - someone to keep the documentation in order and identify what is missing and needs to be documented (Kelly Fan)
-4. A release manager - someone to manage the packaging and release process for your prototype package (Shuyi Chen)
-5. A project manager - someone keeping track of all the moving parts and make sure that everything that needs to happen is happening. (Vidya)
-5. Roles for team members to take charge or different parts of the project. Possible roles:
-    1. Front end lead (Vidya Ramesh)
-    2. Back end lead (Shuyi Chen)
-    3. Database lead (Kelly Fan)
-    4. Design lead (Vidya Ramesh)
-    5. Etc.
+Shuyi  
+- review manager - review pull requests to merge or reject them and manage the related discussions  
+- release manager - manage the packaging and release process for your prototype package  
+- back end lead  
 
-You will notice that there are more roles than people in your group.
-That is because you will all be doing a hybrid job of managing a thing while working on other things.
+Kelly  
+- plan manager - manage overall plan and keep the project tab/to-do list up to date  
+- documentation manager - keep the documentation in order and identify what is missing and needs to be documented  
+- database lead  
 
-## Assignment instructions
+Vidya  
+- project manager - keep track of all the moving parts and make sure that everything that needs to happen is happening  
+- front end lead  
+- design lead  
 
-And that is about all you need to get started.
+## References
 
-Good skill and be creative!
+- [README.md writing and formatting](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
