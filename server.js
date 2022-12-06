@@ -19,15 +19,25 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
+// Route to Homepage
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/login/static/index.html');
+});
+
+//Route to Login Page
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + '/login/static/login.html');
+});
+
 // Setup our default display on launch
-app.get('/', function(req, res) {
+app.get('/login/weather', function(req, res) {
 
     // It shall not fetch and display any data in the index page
     res.render('index', { weather: null, error: null });
 });
 
 // On a post request, the app shall data from OpenWeatherMap using the given arguments
-app.post('/', function(req, res) {
+app.post('/login/weather', function(req, res) {
 
     // Get city name passed in the form
     let city = req.body.city;
