@@ -10,14 +10,14 @@ const db = new sqlite3.Database('./test.db',sqlite3.OPEN_READWRITE,(err)=>{
 
 
 //create table
-sql = `CREATE TABLE users(id INTEGER PRIMARY KEY, first_name,last_name,username,password,email)`;
+sql = `CREATE TABLE users(id INTEGER PRIMARY KEY,username,password)`;
 db.run(sql,(err) => {
     if (err) {
-        // Table already created);
+    // Table already created);
     } else {
-        sql = `INSERT INTO users(first_name,last_name,username,password,email) VALUES(?,?,?,?,?)`;
+        sql = `INSERT INTO users(username,password) VALUES(?,?)`;
         db.run(sql,
-             ["Shuyi","Chen","s821y9","shuyipassword","shuyiemail@gmail.com"],
+             ["s821y9","shuyipassword1"],
              (err)=>{
              if (err) return console.error(err.message);
          });
@@ -26,29 +26,29 @@ db.run(sql,(err) => {
 });
 
 
-// //drop table
-// db.run("DROP TABLE users");
+// drop table
+db.run("DROP TABLE users");
 
 
-//inste data into table
-// sql = `INSERT INTO users(first_name,last_name,username,password,email) VALUES(?,?,?,?,?)`;
-// db.run(sql,
-//     ["Shuyi","Chen","s821y9","shuyipassword","shuyiemail@gmail.com"],
-//     (err)=>{
-//     if (err) return console.error(err.message);
-// });
+// //inste data into table
+sql = `INSERT INTO users(username,password) VALUES(?,?)`;
+db.run(sql,
+    ["s821y9","shuyipassword2"],
+    (err)=>{
+    if (err) return console.error(err.message);
+});
 
-//update data
-// sql = `UPDATE users SET first_name = ? WHERE id = ?`;
-// db.run(sql,['',1],(err)=>{
-//     if (err) return console.error(err.message);
-// });
+// //update data
+// // sql = `UPDATE users SET first_name = ? WHERE id = ?`;
+// // db.run(sql,['',1],(err)=>{
+// //     if (err) return console.error(err.message);
+// // });
 
-// //delete data
-// sql = `DELETE FROM users WHERE id = ?`;
-// db.run(sql,[1],(err)=>{
-//     if (err) return console.error(err.message);
-// });
+// // //delete data
+// // sql = `DELETE FROM users WHERE id = ?`;
+// // db.run(sql,[1],(err)=>{
+// //     if (err) return console.error(err.message);
+// // });
 
 
 // //query data
