@@ -14,10 +14,20 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/static/index.html');
 });
 
-// Route to Login Page
+//Route to Login Page
 app.get('/login', (req, res) => {
   res.sendFile(__dirname + '/static/login.html');
 });
+
+// Route to Weather Page
+//app.get('/login', (req, res) => {
+  //res.sendFile(__dirname + '../../views/index.html');
+//});
+
+//Route to Weather Page
+//app.get('/login', (req, res) => {
+  //res.sendFile('a99-team-32/views/index.html');
+//});
 
 app.post('/login', (req, res) => {
   // Insert Login Code Here
