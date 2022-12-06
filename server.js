@@ -72,24 +72,36 @@ app.post('/login/weather', function(req, res) {
                     clouds = `${weather.clouds.all}`,
                     main = `${weather.weather[0].main}`,
                     // added
+                    weatherFeelTemp = `${weather.main.feels_like}`,
+                    low = `${weather.main.temp_min}`,
+                    high = `${weather.main.temp_max}`,
+                    rain,
+                    cloudcover,
+                    windspeed = `${weather.wind.speed}`,
                     // must convert from unix utc to timezone
                     sunrise = `${new Date((weather.sunrise - weather.timezone) * 1000)}`,
                     sunset = `${new Date((weather.sunset - weather.timezone) * 1000)}`,
-                    weatherFeelTemp = `${weather.main.feels_like}`,
                     // not of interest
                     weatherPressure = `${weather.main.pressure}`,
                     humidity = `${weather.main.humidity}`,
                     visibility = `${weather.visibility}`,
                     weatherFahrenheit,
-                    weatherFahrenheitFeel;
+                    weatherFahrenheitFeel,
+                    fahrenheitLow,
+                    fahrenheitHigh;
                 weatherFahrenheit = ((weatherTemp * 9 / 5) + 32);
                 weatherFahrenheitFeel = ((weatherFeelTemp * 9 / 5) + 32);
+                fahrenheitLow = ((low * 9 / 5) + 32);
+                fahrenheitHigh = ((high * 9 / 5) + 32);
 
                 // We shall also round off the value of the degrees fahrenheit calculated into two decimal places
                 function roundToTwo(num) {
                     return +(Math.round(num + "e+2") + "e-2");
                 }
                 weatherFahrenheit = roundToTwo(weatherFahrenheit);
+                weatherFahrenheitFeel = roundToTwo(weatherFahrenheitFeel);
+                fahrenheitLow = roundToTwo(fahrenheitLow);
+                fahrenheitHigh = roundToTwo(fahrenheitHigh);
 
                 // We shall now render the data to our page (index.ejs) before displaying it out
                 res.render('index', { 
@@ -107,6 +119,11 @@ app.post('/login/weather', function(req, res) {
                     fahrenheit: weatherFahrenheit, 
                     feelTemp: weatherFeelTemp,
                     fahrenheitFeel: weatherFahrenheitFeel, 
+
+                    low: low,
+                    fahrenheitLow: fahrenheitLow,
+                    high: high,
+                    fahrenheitHigh: fahrenheitHigh,
 
                     icon: weatherIcon, 
                     description: weatherDescription,

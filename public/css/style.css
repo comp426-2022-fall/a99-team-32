@@ -12,6 +12,11 @@ body {
     margin: 0 auto;
 }
 
+.card-deck {
+    width: 80%;
+    margin: 2.5% auto;
+    float: none;
+}
 
 /* This will fomart the whole fieldset content*/
 
