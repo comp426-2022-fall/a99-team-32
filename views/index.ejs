@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>Weather Forecast App</title>
+    <title>Weather App</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="shortcut icon" href="https://img.icons8.com/office/16/000000/sunset--v2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/75176/sun-icon-clipart-xl.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,23 +23,51 @@
             </form>
         </fieldset>
         <%if( weather !== null){ %>
-            <div class="grid">
-                <p>
+            <!-- <div class="grid">
+                <p>Current Weather for 
                     <%= place %>
                 </p>
-            </div>
+            </div> -->
             <div class="card-deck">
                 <div class="card card-accent-dark mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Summary</div>
+                    <div class="card-header">Current Weather for <%= place %></div>
                     <div class="card-body text-dark">
                         <img src="<%= icon %>" alt="Weather-Icon">
-                        <h5 class="card-title">Temperature</h5>
-                        <p class="card-text">
-                            In Degrees:
-                            <%= temp %>°C/
-                                <%= fahrenheit %>°F
-                        </p>
-                        <h5 class="card-title">Main</h5>
+                        <h5 class="card-title">Temperature: 
+                            <p class="card-text">
+                                <%= temp %>°C/
+                                    <%= fahrenheit %>°F
+                            </p>
+                        </h5>
+
+                        <h5 class="card-title">Feels Like: 
+                            <p class="card-text">
+                                <%= feelTemp %>°C/
+                                    <%= fahrenheitFeel %>°F
+                            </p>
+                        </h5>
+
+                        <h5 class="card-title">High: 
+                            <p class="card-text">
+                                <%= feelTemp %>°C/
+                                    <%= fahrenheit %>°F
+                            </p>
+                        </h5>
+
+                        <h5 class="card-title">Low: 
+                            <p class="card-text">
+                                <%= feelTemp %>°C/
+                                    <%= fahrenheit %>°F
+                            </p>
+                        </h5>
+
+                        <h5 class="card-title">Rain: 
+                            <p class="card-text">
+                                <%= feelTemp %>%
+                            </p>
+                        </h5>
+
+                        <h5 class="card-title">Main: <%= main %></h5>
                         <p class="card-text">
                             <%= main %>
                         </p>
@@ -57,27 +85,6 @@
                             <p class="card-text">
                                 <%= clouds %>%
                             </p>
-                            <h5 class="card-title">Visibility: </h5>
-                            <p class="card-text">
-                                <%= visibility %> meters
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card-deck">
-                        <div class="card card-accent-dark mb-3" style="max-width: 18rem;">
-                            <div class="card-header">Other info</div>
-                            <div class="card-body text-dark">
-                                <h5 class="card-title">Humidity: </h5>
-                                <p class="card-text">
-                                    <%= humidity %> g.m-3
-                                </p>
-                            </div>
-                            <div class="card-body text-dark">
-                                <h5 class="card-title">Pressure: </h5>
-                                <p class="card-text">
-                                    <%= pressure %> N·m−2
-                                </p>
-                            </div>
                         </div>
                     </div>
                     <% } %>

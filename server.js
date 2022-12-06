@@ -66,16 +66,24 @@ app.post('/login/weather', function(req, res) {
                     /* We shall calculate the current timezone using the data fetched*/
                     weatherTimezone = `${new Date(weather.dt * 1000 - (weather.timezone * 1000))}`;
                 let weatherTemp = `${weather.main.temp}`,
-                    weatherPressure = `${weather.main.pressure}`,
                     /* We shall fetch the weather icon and its size using the icon data*/
                     weatherIcon = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`,
                     weatherDescription = `${weather.weather[0].description}`,
-                    humidity = `${weather.main.humidity}`,
                     clouds = `${weather.clouds.all}`,
-                    visibility = `${weather.visibility}`,
                     main = `${weather.weather[0].main}`,
-                    weatherFahrenheit;
+                    // added
+                    // must convert from unix utc to timezone
+                    sunrise = `${new Date((weather.sunrise - weather.timezone) * 1000)}`,
+                    sunset = `${new Date((weather.sunset - weather.timezone) * 1000)}`,
+                    weatherFeelTemp = `${weather.main.feels_like}`,
+                    // not of interest
+                    weatherPressure = `${weather.main.pressure}`,
+                    humidity = `${weather.main.humidity}`,
+                    visibility = `${weather.visibility}`,
+                    weatherFahrenheit,
+                    weatherFahrenheitFeel;
                 weatherFahrenheit = ((weatherTemp * 9 / 5) + 32);
+                weatherFahrenheitFeel = ((weatherFeelTemp * 9 / 5) + 32);
 
                 // We shall also round off the value of the degrees fahrenheit calculated into two decimal places
                 function roundToTwo(num) {
@@ -84,7 +92,32 @@ app.post('/login/weather', function(req, res) {
                 weatherFahrenheit = roundToTwo(weatherFahrenheit);
 
                 // We shall now render the data to our page (index.ejs) before displaying it out
-                res.render('index', { weather: weather, place: place, temp: weatherTemp, pressure: weatherPressure, icon: weatherIcon, description: weatherDescription, timezone: weatherTimezone, humidity: humidity, fahrenheit: weatherFahrenheit, clouds: clouds, visibility: visibility, main: main, error: null });
+                res.render('index', { 
+                    weather: weather, 
+                    place: place, 
+                    
+                    // timezone info for sunrise/sunset
+                    //timezone: timezone,
+                    //timezone_offset: timezone_offset,
+                    sunrise: sunrise,
+                    sunset: sunset,
+
+                    // real and relative temp
+                    temp: weatherTemp,
+                    fahrenheit: weatherFahrenheit, 
+                    feelTemp: weatherFeelTemp,
+                    fahrenheitFeel: weatherFahrenheitFeel, 
+
+                    icon: weatherIcon, 
+                    description: weatherDescription,
+                    clouds: clouds, 
+
+                    //not of interest
+                    humidity: humidity, 
+                    pressure: weatherPressure, 
+                    visibility: visibility, 
+                    main: main, 
+                    error: null });
             }
         }
     });

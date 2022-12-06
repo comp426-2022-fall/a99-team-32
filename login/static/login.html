@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/75176/sun-icon-clipart-xl.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 	<title>Example Login Form</title>
   </head>
-  <body>
+  <body class="content">
 	<!-- form action="http://localhost:4000" method="post" -->
   	<!-- user input-->
   	Username:<br>
@@ -11,7 +19,46 @@
   	Password:<br>
   	<input type="password" name="password" placeholder="Password" required><br><br>
   	<!-- submit button -->
-  	<a href="/login/weather">Please Login Here!</a>
+  	<a href="/login/weather">
+		<button class="button">Login</button>
+	</a>
 	</form>
   </body>
 </html>
+
+<style>
+	.content {
+		text-align:center;
+		margin:auto;
+		width:80vw;
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+
+	input {
+		width: 50%;
+  		padding: 12px 20px;
+  		margin: 8px 0;
+  		box-sizing: border-box;
+	}
+
+	.button {
+		background-color: transparent;
+		border: 2px solid #ddd;
+		padding: 10px 30px;
+		width: 100px;
+		-webkit-transition: all 0.1s ease-in-out;
+		-moz-transition: all 0.1s ease-in-out;
+		-ms-transition: all 0.1s ease-in-out;
+		-o-transition: all 0.1s ease-in-out;
+		transition: all 0.1s ease-in-out;
+	}
+
+	/* no link underline */
+	a:link { text-decoration: none; }
+	a:visited { text-decoration: none; }
+	a:hover { text-decoration: none; }
+	a:active { text-decoration: none; }
+</style>
