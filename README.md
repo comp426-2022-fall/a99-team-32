@@ -1,12 +1,8 @@
-# Weather App
+# Weatherfy
 
 ## Summary 
 
-COMP426 final project template boilerplate.
-All your code and documentation goes here.
-Change this text to be a brief description of your final project.
-Put the name of your project in the header above.
-You will change everything below to be the main technical documentation, as outlined below.
+Weatherfy is a web app that allows you to search for a location's weather in real-time. It utilizes the OpenWeather API to receive weather data from cities across the world. You will be able to see several weather varibles, including the real temperature, what it "feels like", rainfall prediction, sunrise, sunset, cloudcover, and windspeed. 
 
 ## First steps
 
@@ -28,19 +24,19 @@ check deliverables.
 ## Roles
 
 Shuyi  
-- review manager - review pull requests to merge or reject them and manage the related discussions  
-- release manager - manage the packaging and release process for your prototype package  
-- back end lead  
+- Review manager - review pull requests to merge or reject them and manage the related discussions  
+- Release manager - manage the packaging and release process for your prototype package  
+- Database lead  
 
 Kelly  
-- plan manager - manage overall plan and keep the project tab/to-do list up to date  
-- documentation manager - keep the documentation in order and identify what is missing and needs to be documented  
-- database lead  
+- Plan manager - manage overall plan and keep the project tab/to-do list up to date  
+- Documentation manager - keep the documentation in order and identify what is missing and needs to be documented  
+- Back End Lead  
 
 Vidya  
-- project manager - keep track of all the moving parts and make sure that everything that needs to happen is happening  
-- front end lead  
-- design lead  
+- Project manager - keep track of all the moving parts and make sure that everything that needs to happen is happening  
+- Front end lead  
+- Design lead  
 
 ## References
 
