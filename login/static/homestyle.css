@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://img.icons8.com/plasticine/100/000000/food.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <title>Weather App</title>
-    <style>
-      *{
+/* Reset */
+*{
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -32,7 +20,7 @@ a{
 /* Header */
 header{
     height:100vh;
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&w=1000&q=80") ;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("./images/food.jpg") ;
     background-size:cover;
     background-position: center;   
     position:relative;
@@ -50,7 +38,6 @@ header{
 }
 .links{
     display:flex;
-    justify-content:center;
 }
 .links li{
     margin:10px;
@@ -58,10 +45,10 @@ header{
     padding:10px;
 }
 .links li:hover{
-border-color:rgb(54, 71, 113);
+border-color:orange;
 }
 .logo{
-    color:rgb(239, 237, 243);
+    color:orange;
 }
 /* Main Content */
 .content{
@@ -81,11 +68,27 @@ border-color:rgb(54, 71, 113);
     line-height:3rem;
 }
 .content span{
-    color:rgb(72, 67, 207);
+    color:orange;
 }
 .content p{
     margin-bottom:1.5rem;
     color:#fff;
+}
+.btn{
+    cursor:pointer;
+    color:#fff;
+    background:transparent;
+    border:2px solid #fff;
+    padding:12px;
+    font-size:16px;
+}
+.btn:hover{
+    background-color:#fff;
+    color:#000;
+    
+}
+.btn:focus{
+    outline:none;
 }
 
 /* Media Queries */
@@ -105,25 +108,3 @@ border-color:rgb(54, 71, 113);
         margin-top:6px;
     }   
 }
-    </style>
-  </head>
-  <body>
-    <header class="header">
-      <nav id="nav">
-        <h1 class="logo"><i class="fa fa-cloud" style="font-size:40px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>Weatherfy</h1>
-      </nav>
-      <main>
-        <div class="content">
-          <h1>Get the <span>weather</span> in real-time.</h1>
-          <p>
-            Log In below to get started.
-          </p>
-          <ul class="links">
-            <li><a href="/login">LOG IN</a></li>
-          </ul>
-        </div>
-      </main>
-    </header>
-  </body>
-</html>
-
