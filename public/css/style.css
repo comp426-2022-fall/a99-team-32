@@ -1,34 +1,43 @@
 body {
     width: auto;
     margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #abc0cc;
 }
 
 
 /* This will fomart the whole fieldset content*/
 
 .container {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    background-color: #9ab7c8;
+    align-content: center;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    padding: 20;
 }
 
 .card-deck {
-    width: 80%;
-    margin: 2.5% auto;
+    width: 100%;
+    margin: 0 auto;
     float: none;
+    background-color: #9ab7c8;
+    align-items: center;
 }
 
 /* This will fomart the whole fieldset content*/
 
 fieldset {
     display: block;
+    align-items: center;
+    align-self: center;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-before: 0em;
     -webkit-padding-start: 0em;
     -webkit-padding-end: 0em;
     -webkit-padding-after: 0em;
-    border: 0px;
+    border: 50px;
     border-image-source: initial;
     border-image-slice: initial;
     border-image-width: initial;
@@ -50,9 +59,9 @@ p {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    color: #4b545f;
+    color: #c2c5c9;
     background: #fff;
-    font-family: Open Sans, Verdana;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px 15px;
     margin: 30px 0px;
     -webkit-transition: all 0.1s ease-in-out;
@@ -68,7 +77,8 @@ p {
 
 .ghost-button {
     background-color: transparent;
-    border: 2px solid #ddd;
+    margin-bottom:1.6rem;
+    border: 2px solid rgb(243, 245, 248);
     padding: 10px 30px;
     width: 100%;
     min-width: 350px;
@@ -77,12 +87,36 @@ p {
     -ms-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
+    align-self: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #f7f8fa;
 }
 
 .ghost-button:hover {
-    border: 2px solid #515151;
+    border: 2px solid #34345c;
 }
 
 p {
-    color: #1991e6;
+    color: #164567;
+}
+
+.card-text {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #1c2840;
+    font-size: 20;
+    text-align: center
+}
+
+.card-title {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #1c2840;
+    font-size: 20;
+    text-align: center
+}
+
+.card-header {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #1c2840;
+    font-size: 30;
+    text-align: center;
 }
