@@ -2,7 +2,7 @@
 
 ## Summary 
 
-Weatherfy is a web app that allows you to search for a location's weather in real-time. It utilizes the OpenWeather API to receive weather data from cities across the world. You will be able to see several weather varibles, including the real temperature, what it "feels like", rainfall prediction, sunrise, sunset, cloudcover, and windspeed. 
+Weatherfy is a web app that allows you to search for a location's weather in real-time. It utilizes the OpenWeather API to receive weather data from cities across the world. You will be able to see several weather varibles, including the real temperature, what it "feels like", weather conditions (like clouds, rain, clear sky), humidity, windspeed, sunrise, and sunset. 
 
 ## First steps
 
@@ -24,19 +24,19 @@ check deliverables.
 ## Roles
 
 Shuyi  
-- Review manager - review pull requests to merge or reject them and manage the related discussions  
-- Release manager - manage the packaging and release process for your prototype package  
-- Database lead  
+- Review Manager - review pull requests to merge or reject them and manage the related discussions  
+- Release Manager - manage the packaging and release process for your prototype package  
+- Database Lead  
 
 Kelly  
-- Plan manager - manage overall plan and keep the project tab/to-do list up to date  
-- Documentation manager - keep the documentation in order and identify what is missing and needs to be documented  
+- Plan Manager - manage overall plan and keep the project tab/to-do list up to date  
+- Documentation Manager - keep the documentation in order and identify what is missing and needs to be documented  
 - Back End Lead  
 
 Vidya  
-- Project manager - keep track of all the moving parts and make sure that everything that needs to happen is happening  
-- Front end lead  
-- Design lead  
+- Project Manager - keep track of all the moving parts and make sure that everything that needs to happen is happening  
+- Front End Lead  
+- Design Lead  
 
 ## References
 
