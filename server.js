@@ -16,22 +16,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 // Route to Homepage
-app.get('/', (req, res) => {
+app.get('/weatherfy', (req, res) => {
     res.sendFile(__dirname + '/login/static/index.html');
 });
 
 // Route to Login Page
-app.get('/login', (req, res) => {
+app.get('/weatherfy/login', (req, res) => {
     res.sendFile(__dirname + '/login/static/login.html');
 });
 
 // Route to Weather Page
-app.get('/login/weather', function(req, res) {
+app.get('/weatherfy/login/weather', function(req, res) {
     res.render('index', { weather: null, error: null });
 });
 
 // App displays data from the OpenWeather API
-app.post('/login/weather', function(req, res) {
+app.post('/weatherfy/login/weather', function(req, res) {
 
     // Get city name 
     let city = req.body.city;
