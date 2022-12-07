@@ -24,7 +24,7 @@ team will create a <= 3-minute video describing your app to present to the class
 
 check deliverables.
 
-## Roles
+## [Roles](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/roles.md)
 
 Shuyi  
 - Review Manager - review pull requests to merge or reject them and manage the related discussions  
