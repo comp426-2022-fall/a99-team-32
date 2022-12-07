@@ -107,6 +107,8 @@ app.post('/login/weather', function(req, res) {
                     if (hours > 12) {
                         hours -= 12;
                         AMorPM = " PM";
+                    } else if (hours == 12) {
+                        AMorPM = " PM";
                     }
                     let mins = '0' + date.getMinutes();
                     let secs = '0' + date.getSeconds();
