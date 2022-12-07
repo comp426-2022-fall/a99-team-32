@@ -2,7 +2,7 @@
 
 ## 12/03
 - Brainstorm project ideas
-- Decide on weather and geolocation APIs to create weather forecasting app
+- Decide on weather and geocoding APIs to create weather forecasting app
 
 ## 12/04
 - Decide on OpenWeather API, pulling from current weather data
