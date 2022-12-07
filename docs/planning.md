@@ -11,13 +11,14 @@
 - Started on database
 
 ## 12/05
-- Decided on the design for the app,and created the powerpoint with design specs
+- Decided on the design for the app and created a powerpoint with design specs
+- Got the API and basic login page functionality working
 - Completed front end for the first page of the app
 
 ## 12/06
 - Completed login page front end
 - Completed weather page front end
-- Completed back end
+- Completed back end and made app fully functional
 - Completed database
 - Updated README and planning and API documentation
 - Checked functionality and design on webbrowser
