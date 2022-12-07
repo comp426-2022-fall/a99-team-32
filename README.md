@@ -11,15 +11,11 @@ Weatherfy is a web app that allows you to search for a location's weather in rea
 team will create a <= 3-minute video describing your app to present to the class about your app. This can be a very basic walkthrough, or a description/presentation of features/use cases, or something else. Be creative. Think of it as an opportunity to hone your ability to pitch an idea that you have in prototype (because that is what it is).
 
 ### Instructions for Use
-...to be added.
 
-1. Clone repository.
-2. ...
-3. Search localhost:4000 on webbrowser.
-
-fully documented, including setup instructions, full API documentation, and user instructions, as well as your planning workflow (notes, GitHub Project boards, discussions archives, etc.).
-
-check deliverables.
+1. Clone repository
+2. Install Node.js
+3. Enter **node server.js** or **npm test** into terminal to start app
+4. Search localhost:4000 on webbrowser
 
 ## Documentation
 
