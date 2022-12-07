@@ -76,6 +76,7 @@ app.post('/login/weather', function(req, res) {
                     low = `${weather.main.temp_min}`,
                     high = `${weather.main.temp_max}`,
                     windspeed = `${weather.wind.speed}`,
+                    humidity = `${weather.main.humidity}`,
                     // must convert from unix utc to timezone
                     sunrise = `${weather.sys.sunrise}`,
                     sunset = `${weather.sys.sunset}`,
@@ -146,6 +147,8 @@ app.post('/login/weather', function(req, res) {
 
                     windspeed: windspeed,
                     mphWind: mphWind,
+
+                    humidity: humidity,
 
                     main: main, 
                     error: null });
