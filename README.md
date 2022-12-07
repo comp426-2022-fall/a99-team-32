@@ -2,12 +2,20 @@
 
 ## Summary 
 
-Weatherfy is a web app that allows you to search for a location's weather in real-time. It utilizes the OpenWeather API to receive weather data from cities across the world. You will be able to see several weather varibles, including the real temperature, what it "feels like", weather conditions (like clouds, rain, clear sky), humidity, windspeed, sunrise, and sunset. 
+Weatherfy is a web app that allows you to search for a location's weather in real-time. It utilizes the OpenWeather API to receive weather data from cities across the world. You will be able to see several weather varibles, including the real temperature, what it "feels like", weather conditions (like clouds, rain, clear sky), cloudcover, humidity, windspeed, sunrise, and sunset. 
 
 ## Our App
 
-Instructions for Use:
+### Video Walkthrough
+
+team will create a <= 3-minute video describing your app to present to the class about your app. This can be a very basic walkthrough, or a description/presentation of features/use cases, or something else. Be creative. Think of it as an opportunity to hone your ability to pitch an idea that you have in prototype (because that is what it is).
+
+### Instructions for Use
 ...to be added.
+
+1. Clone repository.
+2. ...
+3. Search localhost:4000 on webbrowser.
 
 Other steps that you will need to take after your team has accepted the assignment:
 
@@ -20,11 +28,11 @@ Other steps that you will need to take after your team has accepted the assignme
 
 fully documented, including setup instructions, full API documentation, and user instructions, as well as your planning workflow (notes, GitHub Project boards, discussions archives, etc.).
 
-team will create a <= 3-minute video describing your app to present to the class about your app. This can be a very basic walkthrough, or a description/presentation of features/use cases, or something else. Be creative. Think of it as an opportunity to hone your ability to pitch an idea that you have in prototype (because that is what it is).
-
 check deliverables.
 
-## [Roles](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/roles.md)
+## Documentation
+
+### [Roles](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/roles.md)
 
 Shuyi  
 - Review Manager - review pull requests to merge or reject them and manage the related discussions  
@@ -41,6 +49,38 @@ Vidya
 - Front End Lead  
 - Design Lead  
 
-## References
+### [Planning](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/planning.md)
+
+#### 12/03
+- Brainstorm project ideas
+- Decide on weather and geocoding APIs to create weather forecasting app
+
+#### 12/04
+- Decide on OpenWeather API, pulling from current weather data
+- Decide on weather variables of interest
+- Start on back end
+- Start on database
+
+#### 12/05
+- Decide on design on front end
+- Complete front page front end
+
+#### 12/06
+- Complete login page front end
+- Complete weather page front end
+- Complete back end
+- Complete database
+- Check functionality and design on webbrowser
+
+#### 12/07
+- Clean up files, comments, and code
+- Film video
+
+### [API](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/api%20documentation.md)
+
+- The webpage that documents the current weather data: [current weather API doc](https://openweathermap.org/current)
+- The webpage that documents the geocoding API: [geocoding API doc](https://openweathermap.org/api/geocoding-api)
+
+### References
 
 - [README.md writing and formatting](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
