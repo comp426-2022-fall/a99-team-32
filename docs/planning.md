@@ -1,26 +1,28 @@
 # Planning
 
 ## 12/03
-- Brainstorm project ideas
-- Decide on weather and geocoding APIs to create weather forecasting app
+- Brainstormed project ideas
+- Decided on weather and geocoding APIs to create weather forecasting app
 
 ## 12/04
-- Decide on OpenWeather API, pulling from current weather data
-- Decide on weather variables of interest
-- Start on back end
-- Start on database
+- Decided on OpenWeather API, pulling from current weather data
+- Decided on weather variables of interest
+- Started on back end
+- Started on database
 
 ## 12/05
-- Decide on design on front end
-- Complete front page front end
+- Decided on the design for the app and created a powerpoint with design specs
+- Got the API and basic login page functionality working
+- Completed front end for the first page of the app
 
 ## 12/06
-- Complete login page front end
-- Complete weather page front end
-- Complete back end
-- Complete database
-- Check functionality and design on webbrowser
+- Completed login page front end
+- Completed weather page front end
+- Completed back end and made app fully functional
+- Completed database
+- Updated README and planning and API documentation
+- Checked functionality and design on webbrowser
 
 ## 12/07
-- Clean up files, comments, and code
-- Film video
+- Cleaned up files, comments, and code
+- Filmed video

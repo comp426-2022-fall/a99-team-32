@@ -16,6 +16,9 @@ team will create a <= 3-minute video describing your app to present to the class
 2. Run npm install inside directory to install dependencies
 3. Run **npm test** or **npm start** (node server.js) to start app
 4. Search localhost:4000 on webbrowser (it listens on port 4000)
+5. Click “LOG IN” for the login page
+6. Put in username and password to login
+7. Search for the real-time weather of the city
 
 ## Documentation
 
