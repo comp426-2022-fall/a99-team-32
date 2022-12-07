@@ -4,7 +4,10 @@
 
 Weatherfy is a web app that allows you to search for a location's weather in real-time. It utilizes the OpenWeather API to receive weather data from cities across the world. You will be able to see several weather varibles, including the real temperature, what it "feels like", weather conditions (like clouds, rain, clear sky), humidity, windspeed, sunrise, and sunset. 
 
-## First steps
+## Our App
+
+Instructions for Use:
+...to be added.
 
 Other steps that you will need to take after your team has accepted the assignment:
 

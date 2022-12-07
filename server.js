@@ -1,5 +1,3 @@
-// Require node_modules
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
@@ -29,17 +27,15 @@ app.get('/login', (req, res) => {
     res.sendFile(__dirname + '/login/static/login.html');
 });
 
-// Setup our default display on launch
+// Route to weather page
 app.get('/login/weather', function(req, res) {
-
-    // It shall not fetch and display any data in the index page
     res.render('index', { weather: null, error: null });
 });
 
-// On a post request, the app shall data from OpenWeatherMap using the given arguments
+// App displays data from the OpenWeather API
 app.post('/login/weather', function(req, res) {
 
-    // Get city name passed in the form
+    // Get city name 
     let city = req.body.city;
 
     // Use that city name to fetch data
@@ -53,25 +49,21 @@ app.post('/login/weather', function(req, res) {
         if (err) {
             res.render('index', { weather: null, error: 'Error, please try again' });
         } else {
+            //Body represents the data fetched, and we will parse it into a variable called "weather"
             let weather = JSON.parse(body);
-
-            // We shall output it in the console just to make sure that the data being displayed is what we want
-            console.log(weather);
 
             if (weather.main == undefined) {
                 res.render('index', { weather: null, error: 'Error, please try again' });
             } else {
-                // we shall use the data got to set up our output
-                let place = `${weather.name}, ${weather.sys.country}`,
-                    /* We shall calculate the current timezone using the data fetched*/
+                // Use the data received to set up our output
+                    place = `${weather.name}, ${weather.sys.country}`,
                     weatherTimezone = `${weather.timezone}`;
-                let weatherTemp = `${weather.main.temp}`,
-                    /* We shall fetch the weather icon and its size using the icon data*/
+                    weatherTemp = `${weather.main.temp}`,
+                    //Weather icon (from API)
                     weatherIcon = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`,
                     weatherDescription = `${weather.weather[0].description}`,
                     clouds = `${weather.clouds.all}`,
                     main = `${weather.weather[0].main}`,
-                    // added
                     weatherFeelTemp = `${weather.main.feels_like}`,
                     low = `${weather.main.temp_min}`,
                     high = `${weather.main.temp_max}`,
@@ -80,18 +72,15 @@ app.post('/login/weather', function(req, res) {
                     // must convert from unix utc to timezone
                     sunrise = `${weather.sys.sunrise}`,
                     sunset = `${weather.sys.sunset}`,
-                    // variables
-                    weatherFahrenheit,
-                    weatherFahrenheitFeel,
-                    fahrenheitLow,
-                    fahrenheitHigh;
-                weatherFahrenheit = ((weatherTemp * 9 / 5) + 32);
-                weatherFahrenheitFeel = ((weatherFeelTemp * 9 / 5) + 32);
-                fahrenheitLow = ((low * 9 / 5) + 32);
-                fahrenheitHigh = ((high * 9 / 5) + 32);
-                mphWind = (windspeed * 2.23694);
 
-                // We shall also round off the value of the degrees fahrenheit calculated into two decimal places
+                    //Calculated variables
+                    weatherFahrenheit = ((weatherTemp * 9 / 5) + 32);
+                    weatherFahrenheitFeel = ((weatherFeelTemp * 9 / 5) + 32);
+                    fahrenheitLow = ((low * 9 / 5) + 32);
+                    fahrenheitHigh = ((high * 9 / 5) + 32);
+                    mphWind = (windspeed * 2.23694);
+
+                // Round off the value of the degrees fahrenheit calculated into two decimal places
                 function roundToTwo(num) {
                     return +(Math.round(num + "e+2") + "e-2");
                 }
@@ -119,18 +108,14 @@ app.post('/login/weather', function(req, res) {
                 sunrise = unixToClock(sunrise);
                 sunset = unixToClock(sunset);
 
-                // We shall now render the data to our page (index.ejs) before displaying it out
+                // Render the data to our page (index.ejs) before displaying it 
                 res.render('index', { 
                     weather: weather, 
                     place: place, 
                     
-                    // timezone info for sunrise/sunset
-                    //timezone: timezone,
-                    //timezone_offset: timezone_offset,
                     sunrise: sunrise,
                     sunset: sunset,
 
-                    // real and relative temp
                     temp: weatherTemp,
                     fahrenheit: weatherFahrenheit, 
                     feelTemp: weatherFeelTemp,
@@ -157,7 +142,7 @@ app.post('/login/weather', function(req, res) {
     });
 });
 
-// We shall set up our port configurations
+// Set up port configurations
 app.listen(4000, function() {
     console.log('Weather app listening on port 4000!');
 });
