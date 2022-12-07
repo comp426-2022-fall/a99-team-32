@@ -17,24 +17,26 @@
 <body>
     <div class="container">
         <fieldset>
+            <!-- On this page, indicating login before access to weather -->
             <form action="/login/weather" method="post">
+                <!-- Input city to get weather -->
                 <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
                 <input type="submit" class="ghost-button" value="Get Weather">
             </form>
         </fieldset>
+        <!-- Check if weather has data -->
         <%if( weather !== null){ %>
-            <!-- <div class="grid">
-                <p>Current Weather for 
-                    <%= place %>
-                </p>
-            </div> -->
-            <div class="card-deck"></div>
             <div class="card">
                 <div class="card card-accent-dark mb-3">
-                    <div class="card-header">Current Weather for <%= place %></div>
+
+                    <!-- Display city of interest -->
+                    <h4 class="card-header">Current Weather for <%= place %></h4>
                     <div class="card-body text-dark">
+
+                        <!-- Display weather icon -->
                         <center><img src="<%= icon %>" alt="Weather-Icon"></center>
                         
+                        <!-- Display weather info -->
                         <h5 class="card-title">Weather Conditions: 
                             <p class="card-text">
                                 <%= description %>
@@ -69,6 +71,12 @@
                             </p>
                         </h5>
 
+                        <h5 class="card-title">Cloudcover: 
+                            <p class="card-text">
+                                <%= clouds %>%
+                            </p>
+                        </h5>
+                        
                         <h5 class="card-title">Humidity: 
                             <p class="card-text">
                                 <%= windspeed %>%
@@ -95,22 +103,17 @@
                         </h5>
 
                     </div>
-                    <% } %>
-
-                        <% if(error !== null){ %>
-                            <p>
-                                <%= error %>
-                            </p>
-                            <% } %>
-
                 </div>
             </div>
-            </div>
-                <!-- Optional JavaScript -->
-                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+            <% } %>
+                <% if(error !== null){ %>
+                    <p>
+                        <%= error %>
+                    </p>
+            <% } %>
+
+    </div>
 </body>
 
 </html>

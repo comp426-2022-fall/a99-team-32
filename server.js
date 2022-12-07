@@ -4,15 +4,13 @@ const request = require('request');
 const app = express();
 
 // Configure dotenv package
-
 require('dotenv').config();
 
-// Set up our openweathermap API_KEY
-
+// Set up openweathermap API_KEY
 const apiKey ='c6f3dd6a279dad951573ece474bbc4ab';
 
-// Setup our express app and body-parser configurations
-// Setup our javascript template view engine
+// Set up express app and body-parser configurations
+// Set up javascript template view engine
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
@@ -22,12 +20,12 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/login/static/index.html');
 });
 
-//Route to Login Page
+// Route to Login Page
 app.get('/login', (req, res) => {
     res.sendFile(__dirname + '/login/static/login.html');
 });
 
-// Route to weather page
+// Route to Weather Page
 app.get('/login/weather', function(req, res) {
     res.render('index', { weather: null, error: null });
 });
@@ -39,7 +37,7 @@ app.post('/login/weather', function(req, res) {
     let city = req.body.city;
 
     // Use that city name to fetch data
-    // Use the API_KEY in the '.env' file
+    // Use the API_KEY
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
     // Request for data using the URL
@@ -47,40 +45,47 @@ app.post('/login/weather', function(req, res) {
 
         // On return, check the json data fetched
         if (err) {
+            // Display error message if there is no such url            
             res.render('index', { weather: null, error: 'Error, please try again' });
         } else {
             //Body represents the data fetched, and we will parse it into a variable called "weather"
             let weather = JSON.parse(body);
 
             if (weather.main == undefined) {
+                // Display error message if there is no defined data in main
                 res.render('index', { weather: null, error: 'Error, please try again' });
             } else {
-                // Use the data received to set up our output
+                    // Use the data received to set up our output
                     place = `${weather.name}, ${weather.sys.country}`,
                     weatherTimezone = `${weather.timezone}`;
-                    weatherTemp = `${weather.main.temp}`,
-                    //Weather icon (from API)
-                    weatherIcon = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`,
-                    weatherDescription = `${weather.weather[0].description}`,
-                    clouds = `${weather.clouds.all}`,
                     main = `${weather.weather[0].main}`,
+                    // Must convert from Celsius to Fahrenheit
+                    weatherTemp = `${weather.main.temp}`,
                     weatherFeelTemp = `${weather.main.feels_like}`,
                     low = `${weather.main.temp_min}`,
                     high = `${weather.main.temp_max}`,
+                    // Weather icon (from API)
+                    weatherIcon = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`,
+                    // General weather condition
+                    weatherDescription = `${weather.weather[0].description}`,
+                    // More details on weather condition
+                    clouds = `${weather.clouds.all}`,
                     windspeed = `${weather.wind.speed}`,
                     humidity = `${weather.main.humidity}`,
-                    // must convert from unix utc to timezone
+                    // Must convert from unix utc to timezone
                     sunrise = `${weather.sys.sunrise}`,
                     sunset = `${weather.sys.sunset}`,
 
-                    //Calculated variables
+                    // Calculated variables
+                    // Celsius to Fahrenheit
                     weatherFahrenheit = ((weatherTemp * 9 / 5) + 32);
                     weatherFahrenheitFeel = ((weatherFeelTemp * 9 / 5) + 32);
                     fahrenheitLow = ((low * 9 / 5) + 32);
                     fahrenheitHigh = ((high * 9 / 5) + 32);
+                    // m/s to mph
                     mphWind = (windspeed * 2.23694);
 
-                // Round off the value of the degrees fahrenheit calculated into two decimal places
+                // Round off calculation into two decimal places
                 function roundToTwo(num) {
                     return +(Math.round(num + "e+2") + "e-2");
                 }
@@ -90,20 +95,27 @@ app.post('/login/weather', function(req, res) {
                 fahrenheitHigh = roundToTwo(fahrenheitHigh);
                 mphWind = roundToTwo(mphWind);
 
+                // Convert from unix to standard clock time and date
                 function unixToClock(num) {
                     let date = new Date((num * 1000));
                     let AMorPM = " AM";
                     let hours = date.getHours();
+                    // Get hours, mins, secs
+                    let mins = '0' + date.getMinutes();
+                    let secs = '0' + date.getSeconds();
+                    // Label PM if more than or equal to 12
                     if (hours > 12) {
                         hours -= 12;
                         AMorPM = " PM";
                     } else if (hours == 12) {
                         AMorPM = " PM";
                     }
-                    let mins = '0' + date.getMinutes();
-                    let secs = '0' + date.getSeconds();
-                    let format = hours + ':' + mins.substr(-2) + ':' + secs.substr(-2);
-                    return format + AMorPM;
+                    // clock time
+                    let clock = hours + ':' + mins.substr(-2) + ':' + secs.substr(-2) + AMorPM;
+                    // day
+                    const options = { weekday: "long" };
+                    let day = new Intl.DateTimeFormat("en-US", options).format(date.getDay());
+                    return clock + " on " + day;
                 }
                 sunrise = unixToClock(sunrise);
                 sunset = unixToClock(sunset);

@@ -1,3 +1,5 @@
+/* This will format the container*/
+
 body {
     width: auto;
     margin: 0 auto;
@@ -6,7 +8,7 @@ body {
 }
 
 
-/* This will fomart the whole fieldset content*/
+/* This will format the container*/
 
 .container {
     width: 100%;
@@ -17,15 +19,7 @@ body {
     padding: 20;
 }
 
-.card-deck {
-    width: 100%;
-    margin: 0 auto;
-    float: none;
-    background-color: #9ab7c8;
-    align-items: center;
-}
-
-/* This will fomart the whole fieldset content*/
+/* This will format the whole fieldset content, like search and button */
 
 fieldset {
     display: block;
@@ -96,6 +90,8 @@ p {
     border: 2px solid #34345c;
 }
 
+/* This will format the words in the cards */
+
 p {
     color: #164567;
 }
@@ -117,6 +113,6 @@ p {
 .card-header {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #1c2840;
-    font-size: 30;
+    font-size: 40;
     text-align: center;
 }
