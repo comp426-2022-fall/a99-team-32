@@ -10,7 +10,7 @@ What makes our app unique from other weather forecasting apps is that we added s
 
 ### Video Walkthrough
 
-team will create a <= 3-minute video describing your app to present to the class about your app. This can be a very basic walkthrough, or a description/presentation of features/use cases, or something else. Be creative. Think of it as an opportunity to hone your ability to pitch an idea that you have in prototype (because that is what it is).
+[Demo slides](https://docs.google.com/presentation/d/1chkkYmoA3AEsBfhWS9rWX-g-OBA3enGbO928zLJ4X1s/edit?usp=sharing)
 
 ### Instructions for Use
 
@@ -68,6 +68,17 @@ Vidya
 #### 12/07
 - Clean up files, comments, and code
 - Film video
+
+### [Future Plans](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/futureplans.md)
+
+#### Trip Planning
+- Add future weather data
+- Recommend what to wear and bring based on weather predictions
+
+#### Account Creation and Information
+- Allow users to sign up for their own account
+- Add User Info page with information on user account name, their home location, and their saved locations
+- Incorporate a database to save user information
 
 ### [API](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/api%20documentation.md)
 
