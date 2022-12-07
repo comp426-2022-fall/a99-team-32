@@ -34,49 +34,45 @@
                     <div class="card-header">Current Weather for <%= place %></div>
                     <div class="card-body text-dark">
                         <center><img src="<%= icon %>" alt="Weather-Icon"></center>
+                        
+                        <h5 class="card-title">Weather Conditions: 
+                            <p class="card-text">
+                                <%= description %>
+                            </p>
+                        </h5>
+                        
                         <h5 class="card-title">Temperature: 
                             <p class="card-text">
-                                <%= temp %>°C/
+                                <%= temp %>°C |
                                     <%= fahrenheit %>°F
                             </p>
                         </h5>
 
                         <h5 class="card-title">Feels Like: 
                             <p class="card-text">
-                                <%= feelTemp %>°C/
+                                <%= feelTemp %>°C |
                                     <%= fahrenheitFeel %>°F
                             </p>
                         </h5>
 
-                        <h5 class="card-title">Low: 
-                            <p class="card-text">
-                                <%= low %>°C/
-                                    <%= fahrenheitLow %>°F
-                            </p>
-                        </h5>
-                        
                         <h5 class="card-title">High: 
                             <p class="card-text">
-                                <%= high %>°C/
+                                <%= high %>°C |
                                     <%= fahrenheitHigh %>°F
                             </p>
                         </h5>
-
-                        <h5 class="card-title">Rain: 
+                        
+                        <h5 class="card-title">Low: 
                             <p class="card-text">
-                                <%= feelTemp %>%
-                            </p>
-                        </h5>
-
-                        <h5 class="card-title">Cloudcover: 
-                            <p class="card-text">
-                                <%= feelTemp %>%
+                                <%= low %>°C |
+                                    <%= fahrenheitLow %>°F
                             </p>
                         </h5>
 
                         <h5 class="card-title">Windspeed: 
                             <p class="card-text">
-                                <%= feelTemp %>%
+                                <%= windspeed %> m/s |
+                                    <%= mphWind %> mph
                             </p>
                         </h5>
 
@@ -88,18 +84,10 @@
 
                         <h5 class="card-title">Sunset: 
                             <p class="card-text">
-                                <%= sunset %>%
+                                <%= sunset %>
                             </p>
                         </h5>
 
-                        <h5 class="card-title">Overall Description: </h5>
-                            <p class="card-text">
-                                <%= description %>
-                            </p>
-                            <h5 class="card-title">Cloud coverage: </h5>
-                            <p class="card-text">
-                                <%= clouds %>%
-                            </p>
                     </div>
                     <% } %>
 

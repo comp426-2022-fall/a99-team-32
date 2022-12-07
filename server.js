@@ -64,7 +64,7 @@ app.post('/login/weather', function(req, res) {
                 // we shall use the data got to set up our output
                 let place = `${weather.name}, ${weather.sys.country}`,
                     /* We shall calculate the current timezone using the data fetched*/
-                    weatherTimezone = `${new Date(weather.dt * 1000 - (weather.timezone * 1000))}`;
+                    weatherTimezone = `${weather.timezone}`;
                 let weatherTemp = `${weather.main.temp}`,
                     /* We shall fetch the weather icon and its size using the icon data*/
                     weatherIcon = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`,
@@ -75,16 +75,11 @@ app.post('/login/weather', function(req, res) {
                     weatherFeelTemp = `${weather.main.feels_like}`,
                     low = `${weather.main.temp_min}`,
                     high = `${weather.main.temp_max}`,
-                    rain,
-                    cloudcover,
                     windspeed = `${weather.wind.speed}`,
                     // must convert from unix utc to timezone
-                    sunrise = `${new Date((weather.sunrise - weather.timezone) * 1000)}`,
-                    sunset = `${new Date((weather.sunset - weather.timezone) * 1000)}`,
-                    // not of interest
-                    weatherPressure = `${weather.main.pressure}`,
-                    humidity = `${weather.main.humidity}`,
-                    visibility = `${weather.visibility}`,
+                    sunrise = `${weather.sys.sunrise}`,
+                    sunset = `${weather.sys.sunset}`,
+                    // variables
                     weatherFahrenheit,
                     weatherFahrenheitFeel,
                     fahrenheitLow,
@@ -93,6 +88,7 @@ app.post('/login/weather', function(req, res) {
                 weatherFahrenheitFeel = ((weatherFeelTemp * 9 / 5) + 32);
                 fahrenheitLow = ((low * 9 / 5) + 32);
                 fahrenheitHigh = ((high * 9 / 5) + 32);
+                mphWind = (windspeed * 2.23694);
 
                 // We shall also round off the value of the degrees fahrenheit calculated into two decimal places
                 function roundToTwo(num) {
@@ -102,6 +98,23 @@ app.post('/login/weather', function(req, res) {
                 weatherFahrenheitFeel = roundToTwo(weatherFahrenheitFeel);
                 fahrenheitLow = roundToTwo(fahrenheitLow);
                 fahrenheitHigh = roundToTwo(fahrenheitHigh);
+                mphWind = roundToTwo(mphWind);
+
+                function unixToClock(num) {
+                    let date = new Date((num * 1000));
+                    let AMorPM = " AM";
+                    let hours = date.getHours();
+                    if (hours > 12) {
+                        hours -= 12;
+                        AMorPM = " PM";
+                    }
+                    let mins = '0' + date.getMinutes();
+                    let secs = '0' + date.getSeconds();
+                    let format = hours + ':' + mins.substr(-2) + ':' + secs.substr(-2);
+                    return format + AMorPM;
+                }
+                sunrise = unixToClock(sunrise);
+                sunset = unixToClock(sunset);
 
                 // We shall now render the data to our page (index.ejs) before displaying it out
                 res.render('index', { 
@@ -129,10 +142,9 @@ app.post('/login/weather', function(req, res) {
                     description: weatherDescription,
                     clouds: clouds, 
 
-                    //not of interest
-                    humidity: humidity, 
-                    pressure: weatherPressure, 
-                    visibility: visibility, 
+                    windspeed: windspeed,
+                    mphWind: mphWind,
+
                     main: main, 
                     error: null });
             }
