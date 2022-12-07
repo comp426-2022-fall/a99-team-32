@@ -4,7 +4,7 @@
 
 Weatherfy is a web app that allows you to search for a location's weather in real-time. It utilizes the OpenWeather API to receive weather data from cities across the world. You will be able to see several weather varibles, including the real temperature, what it "feels like", weather conditions (like clouds, rain, clear sky), cloudcover, humidity, windspeed, sunrise, and sunset. 
 
-What makes our app unique from other weather forecasting apps is that we added sunrise and sunset information, and also converted the timezones to the timezone of the user's laptop. That way, you can see the sunrise and sunset information in terms of your own timezone.
+What makes our app unique from other weather forecasting apps is that we added sunrise and sunset information, and also converted the timezones to the timezone of the user's laptop. That way, you can see the sunrise and sunset information for any city in terms of your own timezone.
 
 ## Our App
 
