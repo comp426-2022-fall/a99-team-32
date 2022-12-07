@@ -14,7 +14,7 @@ team will create a <= 3-minute video describing your app to present to the class
 
 1. Clone repository
 2. Install Node.js
-3. Enter **node server.js** or **npm test** into terminal to start app
+3. Enter **npm test** or **npm start** (node server.js) into terminal to start app
 4. Search localhost:4000 on webbrowser
 
 ## Documentation
