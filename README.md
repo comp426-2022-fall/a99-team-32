@@ -16,11 +16,12 @@ team will create a <= 3-minute video describing your app to present to the class
 
 1. Clone repository
 2. Run npm install inside directory to install dependencies
-3. Run **npm test** or **npm start** (node server.js) to start app
+3. Run `npm test` or `npm start` (node server.js) to start app
 4. Search [localhost:4000/weatherfy](http://localhost:4000/weatherfy) on web browser (it listens on port 4000)
 5. Click “LOG IN” for the login page
 6. Put in username and password to login
 7. Search for the real-time weather of the city
+8. Press `CTRL + C` to stop app
 
 ## Documentation
 
