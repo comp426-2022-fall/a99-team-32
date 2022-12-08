@@ -52,12 +52,12 @@ Vidya
 - Planned to-do list through project board
 
 #### 12/04
-- Decide on OpenWeather API, pulling from current weather data
-- Figure out how the Current Weather Data API and Geolocating API work
-- Create API key
-- Decide on weather variables of interest
-- Start on back end
-- Start on database
+- Decided on OpenWeather API, pulling from current weather data
+- Figured out how the Current Weather Data API and Geolocating API work
+- Created API key
+- Decided on weather variables of interest
+- Started on back end
+- Started on database
 
 #### 12/05
 - Decide on design for front end
