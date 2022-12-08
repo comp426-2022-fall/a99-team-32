@@ -1,6 +1,6 @@
-//This file contains the css information to style the weather page. The corresponding html file is called "index.ejs" and is located in the "views" directory. 
+/* This file contains the css information to style the weather page. The corresponding html file is called "index.ejs" and is located in the "views" directory. */
 
-// This will format the body
+/*This will format the body */
 
 body {
     width: auto;
@@ -10,7 +10,7 @@ body {
 }
 
 
-// This will format the container
+/* This will format the container */
 
 .container {
     width: 100%;
@@ -21,7 +21,7 @@ body {
     padding: 20;
 }
 
-// This will format the whole fieldset content, like search and button
+/* This will format the whole fieldset content, like search and button */
 
 fieldset {
     display: block;
@@ -92,7 +92,7 @@ p {
     border: 2px solid #34345c;
 }
 
-/* This will format the words in the cards */
+/* This will format the words in the card */
 
 p {
     color: #164567;
