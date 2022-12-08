@@ -72,6 +72,7 @@ Vidya
 
 #### 12/07
 - Clean up files, comments, and code
+- Brainstorm future plans
 - Film video
 
 ### [Future Plans](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/futureplans.md)
