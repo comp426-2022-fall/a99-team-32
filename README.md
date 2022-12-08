@@ -65,11 +65,11 @@ Vidya
 - Completed front end for the first page of the app
 
 #### 12/06
-- Complete login page front end
-- Complete weather page front end
-- Complete back end
-- Complete database
-- Check functionality and design on webbrowser
+- Completed login page front end
+- Completed weather page front end
+- Completed back end
+- Completed database
+- Checked functionality and design on web browser
 
 #### 12/07
 - Clean up files, comments, and code
