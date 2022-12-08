@@ -94,7 +94,7 @@ The webpage that documents the current weather data: [current weather API doc](h
 
 The webpage that documents the geocoding API: [geocoding API doc](https://openweathermap.org/api/geocoding-api)
 
-#### API Endpoints
+### API Endpoints
 These are endpoints based off of `localhost:4000`.
 
 #### `/weatherfy`
