@@ -25,6 +25,17 @@ Link to [Demo slides](https://docs.google.com/presentation/d/1chkkYmoA3AEsBfhWS9
 7. Search for the real-time weather of the city
 8. Press `CTRL + C` to stop app
 
+### [Future Plans](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/futureplans.md)
+
+#### Trip Planning
+- Add future weather data
+- Recommend what to wear and bring based on weather predictions
+
+#### Account Creation and Information
+- Allow users to sign up for their own account
+- Add User Info page with information on user account name, their home location, and their saved locations
+- Incorporate a database to save user information
+
 ## Documentation
 
 ### [Roles](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/roles.md)
@@ -76,17 +87,6 @@ Vidya
 - Cleaned up files, comments, and code
 - Brainstormed future plans
 - Filmed video
-
-### [Future Plans](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/futureplans.md)
-
-#### Trip Planning
-- Add future weather data
-- Recommend what to wear and bring based on weather predictions
-
-#### Account Creation and Information
-- Allow users to sign up for their own account
-- Add User Info page with information on user account name, their home location, and their saved locations
-- Incorporate a database to save user information
 
 ### [API](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/api%20documentation.md)
 
