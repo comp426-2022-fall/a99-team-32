@@ -8,6 +8,7 @@
 ## 12/04
 - Decided on OpenWeather API, pulling from current weather data
 - Figure out how the Current Weather Data API and Geolocating API work
+- Create API key
 - Decided on weather variables of interest
 - Started on back end
 - Started on database
