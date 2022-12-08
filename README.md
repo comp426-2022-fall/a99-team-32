@@ -21,7 +21,7 @@ Link to [Demo slides](https://docs.google.com/presentation/d/1chkkYmoA3AEsBfhWS9
 3. Run `npm test` or `npm start` (node server.js) to start app
 4. Search [localhost:4000/weatherfy](http://localhost:4000/weatherfy) on web browser (it listens on port 4000)
 5. Click “LOG IN” for the login page
-6. Put in username and password to login
+6. Put in username and password to login (in the demo video, we use username: comp426 and password: weatherfy)
 7. Search for the real-time weather of the city
 8. Press `CTRL + C` to stop app
 
@@ -30,17 +30,17 @@ Link to [Demo slides](https://docs.google.com/presentation/d/1chkkYmoA3AEsBfhWS9
 ### [Roles](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/roles.md)
 
 Shuyi  
-- Review Manager - review pull requests to merge or reject them and manage the related discussions  
-- Release Manager - manage the packaging and release process for your prototype package  
+- Review Manager - Reviews pull requests to merge or reject them and manage the related discussions  
+- Release Manager - Manages the packaging and release process for your prototype package  
 - Database Lead  
 
 Kelly  
-- Plan Manager - manage overall plan and keep the project tab/to-do list up to date  
-- Documentation Manager - keep the documentation in order and identify what is missing and needs to be documented  
+- Plan Manager - Manages overall plan and keep the project tab/to-do list up to date  
+- Documentation Manager - Keeps the documentation in order and identify what is missing and needs to be documented  
 - Back End Lead  
 
 Vidya  
-- Project Manager - keep track of all the moving parts and make sure that everything that needs to happen is happening  
+- Project Manager - Keeps track of all the moving parts and make sure that everything that needs to happen is happening  
 - Front End Lead  
 - Design Lead  
 
@@ -68,7 +68,7 @@ Vidya
 - Completed login page front end
 - Completed weather page front end
 - Completed back end and made app fully functional
-- Completed database
+- Worked on database (not quite finished, still in the process as this is a prototype)
 - Updated README and planning and API documentation
 - Checked functionality and design on web browser
 
