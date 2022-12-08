@@ -30,7 +30,7 @@ app.get('/weatherfy/login/weather', function(req, res) {
     res.render('index', { weather: null, error: null });
 });
 
-// App displays data from the OpenWeather API
+// App displays Current Weather Data from the OpenWeather API
 app.post('/weatherfy/login/weather', function(req, res) {
 
     // Get city name 
@@ -85,10 +85,11 @@ app.post('/weatherfy/login/weather', function(req, res) {
                     // m/s to mph
                     mphWind = (windspeed * 2.23694);
 
-                // Round off calculation into two decimal places
+                // Round off calculation to two decimal places
                 function roundToTwo(num) {
                     return +(Math.round(num + "e+2") + "e-2");
                 }
+                //Round the temperature variables
                 weatherFahrenheit = roundToTwo(weatherFahrenheit);
                 weatherFahrenheitFeel = roundToTwo(weatherFahrenheitFeel);
                 fahrenheitLow = roundToTwo(fahrenheitLow);
@@ -117,6 +118,7 @@ app.post('/weatherfy/login/weather', function(req, res) {
                     let day = new Intl.DateTimeFormat("en-US", options).format(date.getDay());
                     return clock + " on " + day;
                 }
+                //Convert sunrise and sunset times from seconds to standard clock time and date
                 sunrise = unixToClock(sunrise);
                 sunset = unixToClock(sunset);
 
