@@ -67,8 +67,9 @@ Vidya
 #### 12/06
 - Completed login page front end
 - Completed weather page front end
-- Completed back end
+- Completed back end and made app fully functional
 - Completed database
+- Updated README and planning and API documentation
 - Checked functionality and design on web browser
 
 #### 12/07
