@@ -54,6 +54,7 @@ Vidya
 #### 12/04
 - Decide on OpenWeather API, pulling from current weather data
 - Figure out how the Current Weather Data API and Geolocating API work
+- Create API key
 - Decide on weather variables of interest
 - Start on back end
 - Start on database
