@@ -28,4 +28,5 @@
 
 ## 12/07
 - Cleaned up files, comments, and code
+- Brainstormed future plans
 - Filmed video
