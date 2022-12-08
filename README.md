@@ -47,9 +47,9 @@ Vidya
 ### [Planning](https://github.com/comp426-2022-fall/a99-team-32/blob/main/docs/planning.md)
 
 #### 12/03
-- Brainstorm project ideas
-- Decide on weather and geocoding APIs to create weather forecasting app
-- Plan to-do list through project board
+- Brainstormed project ideas
+- Decided on weather and geocoding APIs to create weather forecasting app
+- Planned to-do list through project board
 
 #### 12/04
 - Decide on OpenWeather API, pulling from current weather data
