@@ -58,7 +58,7 @@ Vidya
 - Start on database
 
 #### 12/05
-- Decide on design on front end
+- Decide on design for front end
 - Complete front page front end
 
 #### 12/06
