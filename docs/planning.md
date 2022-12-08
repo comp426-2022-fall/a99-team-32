@@ -1,8 +1,9 @@
 # Planning
 
 ## 12/03
-- Brainstormed project ideas
-- Decided on weather and geocoding APIs to create weather forecasting app
+- Brainstorm project ideas
+- Decide on weather and geocoding APIs to create weather forecasting app
+- Plan to-do list through project board
 
 ## 12/04
 - Decided on OpenWeather API, pulling from current weather data
