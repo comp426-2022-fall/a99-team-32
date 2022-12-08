@@ -60,9 +60,9 @@ Vidya
 - Started on database
 
 #### 12/05
-- Decide on design for front end
-- Complete front page front end
-- Add more weather variables
+- Decided on the design for the app and created a powerpoint with design specs
+- Got the API and basic login page functionality working
+- Completed front end for the first page of the app
 
 #### 12/06
 - Complete login page front end
